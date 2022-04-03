@@ -1,0 +1,159 @@
+
+$font-body:'Open Sans', sans-serif;
+$font-head: 'Poppins', sans-serif;
+
+$Violet: hsl(257, 40%, 49%);
+$Soft-Magenta: hsl(300, 69%, 71%);
+
+@mixin responsive($breakpoints) {
+    @media only screen and (min-width: $breakpoints) {
+        @content;
+    }
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+html{
+    font-size: 62.5%;
+    
+}
+body{
+    width: 100vw;
+    min-height: 100vh;
+    background-image: url(../images/bg-mobile.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: inset 0 0 0 1000px rgba($Violet, 0.7), inset 0 0 0 1000px rgba($Soft-Magenta, 0.7);
+    @include responsive(1200px)
+    {
+        background-image: url(../images/bg-desktop.svg);
+    }
+}
+header{
+    width: 100%;
+    font-family: $font-head;
+    color: white; 
+    img{
+        width: 15rem;
+        margin: 8%;
+        @include responsive(1200px)
+        {   
+            width: 22.5rem;
+            margin: 4% 4% 0% 4%;
+        }
+    }
+}
+main{
+    width: 100%;
+    color: white; 
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 3%;
+    img{
+        width: 30rem;
+        margin: 10% auto;
+        @include responsive(1200px)
+        {   
+            width: 52%;
+            margin: 4% 0% 0% 4%;
+        }
+    }
+    .description{
+        text-align: center;
+        @include responsive(1200px)
+        {   
+            width: 44%;
+            margin: 5% 0% 0% 0%;
+        }
+        h1{
+            font-family: $font-head;
+            text-align: center;
+            margin: 5% 10% 0% 10%;
+            font-weight: 600;
+            font-size: 2.4rem;
+            @include responsive(1200px)
+            {   
+              font-size: 4rem;
+              text-align: left;
+            }
+        }
+        p{
+            font-family: $font-body;
+            text-align: center;
+            margin: 5% 10% 0% 10%;
+            font-weight: 400;
+            font-size: 1.6rem;
+            @include responsive(1200px)
+            {   
+              font-size: 1.75rem;
+              text-align: left;
+            }
+        }
+        button{
+            padding: 3% 20%;
+            margin: 5% auto;
+            color: $Violet;
+            font-family: $font-body;
+            font-weight: 6400;
+            font-size: 1.5rem;
+            border-radius: 50px;
+            box-shadow: 0px 0px 18px 5px rgba(0,0,0,0.35);
+            @include responsive(1200px)
+            {   
+              font-size: 1.85rem;
+              float: left;
+              padding: 3% 15%;
+              margin: 4% 10%;
+
+            }
+        }
+    }
+}
+footer{
+    width: 100%;
+    margin: 5%;
+    @include responsive(1200px)
+    { 
+        margin: 2% 2% 0% 2%;
+    }
+    .social-media
+    {
+        text-align: center;
+        margin: 10%;
+        @include responsive(1200px)
+        { 
+        margin:  1% 5% 0% 2%;
+        text-align: right;
+        }
+        i{
+            --fa-border-padding: 5%; 
+           margin: 2%;
+           --fa-border-radius: 50%; 
+           color: white;
+           @include responsive(1200px)
+            { 
+                --fa-border-padding: 2rem; 
+                margin: 1%;
+                --fa-border-radius: 50%; 
+            }
+        }
+    }
+    .attribution { 
+        font-size: 1.2rem; 
+        text-align: center; 
+        color: white;
+        margin-top: 2%;
+        a { 
+            color: $Soft-Magenta; 
+        }
+}
+
+}
