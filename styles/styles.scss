@@ -115,6 +115,12 @@ main{
 
             }
         }
+        button:hover{
+            cursor: pointer;
+            color: white; 
+            background-color: hsl(300, 69%, 71%);
+        }
+
     }
 }
 footer{
@@ -144,6 +150,11 @@ footer{
                 margin: 1%;
                 --fa-border-radius: 50%; 
             }
+        }
+        i:hover{
+            color: $Soft-Magenta;
+            --fa-border-color: ;
+            cursor: pointer;
         }
     }
     .attribution { 

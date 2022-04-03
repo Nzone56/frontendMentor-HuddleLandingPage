@@ -144,6 +144,12 @@ main .description button {
   }
 }
 
+main .description button:hover {
+  cursor: pointer;
+  color: white;
+  background-color: #e882e8;
+}
+
 footer {
   width: 100%;
   margin: 5%;
@@ -180,6 +186,12 @@ footer .social-media i {
     margin: 1%;
     --fa-border-radius: 50%;
   }
+}
+
+footer .social-media i:hover {
+  color: #e882e8;
+  --fa-border-color: ;
+  cursor: pointer;
 }
 
 footer .attribution {
